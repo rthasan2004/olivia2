@@ -36,77 +36,73 @@ button,input{font-family:inherit}
 .sbox input{border:0;padding:10px 16px;font-size:15px;width:200px;background:none}
 .sbox button{background:var(--gold);color:#fff;border:0;padding:0 14px;cursor:pointer}
 .main{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;padding-top:16px;padding-bottom:20px}
-.slider{position:relative;height:360px;border-radius:14px;overflow:hidden;background:var(--dark);color:#fff}
-.slide{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:0 70px;background-size:cover;background-position:center;opacity:0;visibility:hidden;transition:opacity .9s,visibility .9s}
+.slider{position:relative;height:340px;border-radius:14px;overflow:hidden;background:var(--dark);color:#fff}
+.slide{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:10px;padding:0 70px;background-size:cover;background-position:center;opacity:0;visibility:hidden;transition:opacity .9s,visibility .9s}
 .slide.on{opacity:1;visibility:visible}
 .slide::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.25) 70%,rgba(0,0,0,.1))}
 .slide>*{position:relative;max-width:520px}
-.slide .tagc{align-self:flex-start;border:1.5px solid var(--gold);color:#fff;border-radius:999px;padding:3px 16px;font-size:14px}
-.slide h2{font-size:clamp(30px,5vw,50px)}
+.slide .tagc{align-self:flex-start;border:1.5px solid var(--gold);color:#fff;border-radius:999px;padding:2px 14px;font-size:13px}
+.slide h2{font-size:clamp(24px,4.5vw,44px)}
 .slide h2 span{color:#f3c76a}
-.slide p{margin:0;font-size:18px;opacity:.95}
-.btn{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:var(--gold);color:#fff;border-radius:999px;padding:11px 26px;font-weight:700;border:0;cursor:pointer;transition:transform .25s,background .25s}
+.slide p{margin:0;font-size:16px;opacity:.95;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.btn{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:var(--gold);color:#fff;border-radius:999px;padding:10px 24px;font-weight:700;border:0;cursor:pointer;transition:transform .25s,background .25s}
 .btn:hover{background:var(--gold-d);transform:translateY(-2px)}
 .arr{position:absolute;top:50%;translate:0 -50%;width:42px;height:42px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;border:1.5px solid rgba(255,255,255,.5);cursor:pointer;z-index:2;font-size:20px}
 .arr.l{left:14px}.arr.r{right:14px}
-.dots{position:absolute;left:70px;bottom:16px;display:flex;gap:8px;z-index:2}
+.dots{position:absolute;left:70px;bottom:14px;display:flex;gap:8px;z-index:2}
 .dots button{width:9px;height:9px;border-radius:50%;border:0;background:#fff;opacity:.55;padding:0;cursor:pointer}
 .dots button.on{background:var(--gold);opacity:1}
-.strip{display:grid;grid-template-columns:repeat(4,1fr);background:var(--cream);border-radius:12px;margin:16px 0;padding:14px 0}
-.strip a{display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px;border-right:1px solid var(--line);padding:4px 8px;transition:transform .3s}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);background:var(--cream);border-radius:12px;margin:14px 0;padding:10px 0}
+.strip a{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;border-right:1px solid var(--line);padding:2px 6px;transition:transform .3s}
 .strip a:last-child{border:0}
 .strip a:hover{transform:translateY(-3px)}
-.strip b{font-weight:700}.strip small{color:var(--muted);font-size:13px}
-.secs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.sh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.sh h2{font-size:21px;display:flex;gap:8px;align-items:center}
-.sh a{font-size:14px;font-weight:500}
-.card{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(80,60,20,.07)}
-.pic{aspect-ratio:16/10;background-size:cover;background-position:center;position:relative}
+.strip b{font-weight:700;font-size:15px}.strip small{color:var(--muted);font-size:12px}
+.card{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(80,60,20,.07)}
+.pic{aspect-ratio:4/3;background-size:cover;background-position:center;position:relative}
 .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.card .in{padding:12px 14px 14px}
-.chip{display:inline-block;background:var(--cream);color:var(--gold-d);font-size:12px;font-weight:700;border-radius:999px;padding:1px 10px;margin-bottom:4px}
-.card h3{font-size:19px}
-.card p{margin:6px 0 8px;color:var(--muted);font-size:14.5px}
-.meta{color:var(--muted);font-size:13px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.more{display:block;margin:24px auto 0;border:1.5px solid var(--gold);background:none;color:var(--gold-d);border-radius:999px;padding:10px 30px;font-weight:700;cursor:pointer}
-.ttl{display:flex;align-items:center;gap:16px;margin:4px 0 18px}
+.card .in{padding:8px 10px 10px}
+.chip{display:inline-block;background:var(--cream);color:var(--gold-d);font-size:11px;font-weight:700;border-radius:999px;padding:0 9px;margin-bottom:3px}
+.card h3{font-size:15px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card p{display:none}
+.meta{color:var(--muted);font-size:12px;margin-top:3px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.more{display:block;margin:20px auto 0;border:1.5px solid var(--gold);background:none;color:var(--gold-d);border-radius:999px;padding:9px 28px;font-weight:700;cursor:pointer}
+.ttl{display:flex;align-items:center;gap:16px;margin:4px 0 14px}
 .ttl span{flex:1;height:1px;background:var(--gold)}
-.ttl h2{font-size:26px}
-.side>*{margin-bottom:18px}
-.box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
-.box h3{font-size:22px;margin-bottom:10px;display:flex;gap:8px;align-items:center}
-.pop{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--line);align-items:center}
+.ttl h2{font-size:22px}
+.side>*{margin-bottom:16px}
+.box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.box h3{font-size:20px;margin-bottom:8px;display:flex;gap:8px;align-items:center}
+.pop{display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--line);align-items:center}
 .pop:first-of-type{border:0}
-.pop .th{width:92px;height:62px;border-radius:8px;background-size:cover;background-position:center;flex:none;overflow:hidden;position:relative}
+.pop .th{width:78px;height:54px;border-radius:8px;background-size:cover;background-position:center;flex:none;overflow:hidden;position:relative}
 .pop .th img{width:100%;height:100%;object-fit:cover}
-.pop b{display:block;font:700 15px/1.3 "Playfair Display",serif}
-.pop small{color:var(--muted)}
+.pop b{display:block;font:700 14px/1.3 "Playfair Display",serif}
+.pop small{color:var(--muted);font-size:12px}
 .news{background:var(--cream)}
-.news p{margin:0 0 10px;color:var(--muted)}
-.news input{width:100%;border:1.5px solid var(--line);border-radius:999px;padding:11px 16px;font-size:15px;margin-bottom:10px;background:#fff}
+.news p{margin:0 0 10px;color:var(--muted);font-size:15px}
+.news input{width:100%;border:1.5px solid var(--line);border-radius:999px;padding:10px 16px;font-size:15px;margin-bottom:10px;background:#fff}
 .news .btn{width:100%;justify-content:center;border-radius:10px}
 .news .msg{font-size:14px;margin-top:8px;color:var(--leaf)}
-.brandc{background:var(--dark);color:#fff;border-radius:12px;padding:24px 20px;font:italic 600 26px/1.3 "Playfair Display",serif}
+.brandc{background:var(--dark);color:#fff;border-radius:12px;padding:20px;font:italic 600 24px/1.3 "Playfair Display",serif}
 .brandc span{color:#f3c76a}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
 .back{display:inline-block;margin:6px 0 14px;color:var(--muted)}
 article .pic{aspect-ratio:16/8;border-radius:14px;overflow:hidden;margin-bottom:18px}
-article h1{font-size:clamp(30px,5vw,44px);margin-bottom:8px}
+article h1{font-size:clamp(28px,5vw,42px);margin-bottom:8px}
 .prose{max-width:38em;padding-bottom:24px;font-size:17px}.prose p{margin:0 0 1.1em}
-.adslot{display:flex;justify-content:center;max-width:100%;overflow:hidden;margin:14px auto}
+.adslot{display:flex;justify-content:center;max-width:100%;overflow:hidden;margin:12px auto}
 .adslot:empty{display:none;margin:0}
 .adslot iframe{border:0;max-width:100%;display:block}
-footer{background:var(--dark);color:#d8d2c6;margin-top:30px;padding:30px 0;text-align:center;font-size:14px}
-footer b{font:700 28px "Playfair Display",serif;color:#fff;display:block}footer b i{font-style:normal;color:#f3c76a}
-@media(max-width:1000px){.main{grid-template-columns:1fr}.secs,.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav button{padding:10px 14px}}
-@media(max-width:640px){.top .tg{display:none}.head .wrap{gap:8px}.nav{margin:0;width:100%;justify-content:space-between}.nav button{flex:1;padding:8px 4px;font-size:13px}.sbox{width:100%}.sbox input{flex:1;width:auto}.slider{height:330px}.slide{padding:0 22px}.arr{display:none}.dots{left:22px}.secs,.grid{grid-template-columns:1fr}.strip{grid-template-columns:repeat(2,1fr);row-gap:10px}.strip a:nth-child(2){border:0}.logo b{font-size:28px}}
+footer{background:var(--dark);color:#d8d2c6;margin-top:24px;padding:26px 0;text-align:center;font-size:14px}
+footer b{font:700 26px "Playfair Display",serif;color:#fff;display:block}footer b i{font-style:normal;color:#f3c76a}
+@media(max-width:1000px){.main{grid-template-columns:1fr}.nav button{padding:10px 14px}}
+@media(max-width:640px){.top .tg{display:none}.head .wrap{gap:8px}.nav{margin:0;width:100%;justify-content:space-between}.nav button{flex:1;padding:8px 4px;font-size:13px}.sbox{width:100%}.sbox input{flex:1;width:auto}.slider{height:240px}.slide{padding:0 20px;gap:8px}.slide p{font-size:14px}.arr{display:none}.dots{left:20px;bottom:10px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.strip{grid-template-columns:repeat(2,1fr);row-gap:8px}.strip a:nth-child(2){border:0}.logo b{font-size:28px}.logo svg{width:46px;height:36px}}
 
 @keyframes rise{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:none}}
 @keyframes drop{from{opacity:0;transform:translateY(-24px)}to{opacity:1;transform:none}}
 @keyframes pop{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:none}}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(194,138,28,.55)}60%{box-shadow:0 0 0 14px rgba(194,138,28,0)}}
 @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .logo{animation:drop .9s backwards}
@@ -124,7 +120,7 @@ article{animation:rise .8s ease-out backwards}
 .card.in{animation:bob 5s ease-in-out infinite}
 .card.in:nth-child(2n){animation-duration:6s;animation-delay:-1.5s}
 .card.in:nth-child(3n){animation-duration:4.6s;animation-delay:-3s}
-.card:hover{animation-play-state:paused;scale:1.03;box-shadow:0 14px 28px rgba(80,60,20,.2)}
+.card:hover{animation-play-state:paused;scale:1.03;box-shadow:0 12px 24px rgba(80,60,20,.2)}
 .card:hover .pic img{transform:scale(1.08)}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;translate:none}.ttl span{transform:none}}
 </style>
@@ -165,7 +161,7 @@ Recipes / Health / Home Decor / post pages: top, native and bottom banners only.
 <footer><b>Olivia <i>Idea</i></b>Your Lifestyle Companion<br>© Olivia Idea. All rights reserved.</footer>
 
 <script>
-var P=[],app=document.getElementById("app"),shown=9,STEP=9,q="",slideTimer=null;
+var P=[],app=document.getElementById("app"),shown=8,STEP=8,q="",slideTimer=null;
 var Q=new URLSearchParams(location.search);
 var CP=Q.get("p"),filter=Q.get("c")||"All",isHome=!CP&&filter==="All";
 var CATS=[["Recipes","Cook with Love","fork"],["Health","Stay Healthy","heart"],["Home Decor","Decorate Smart","sofa"]];
@@ -178,7 +174,7 @@ function excerpt(b){var t=b.split(/\n{2,}/)[0];return t.length>110?t.slice(0,107
 function ico(n){return '<svg class="ic" aria-hidden="true"><use href="#i-'+n+'"/></svg>'}
 function bg(p){return p.image?'background-image:url('+esc(p.image)+')':'background:linear-gradient(135deg,'+esc(p.color||"#c28a1c")+',#2b2620)'}
 function pic(p){return '<div class="pic" style="background:'+esc(p.color||"#c28a1c")+'33">'+(p.image?'<img src="'+esc(p.image)+'" alt="" loading="lazy">':'')+'</div>'}
-function card(p){return '<a class="card rv" href="?p='+p.id+'">'+pic(p)+'<div class="in"><span class="chip">'+esc(p.cat)+'</span><h3>'+esc(p.title)+'</h3><p>'+esc(excerpt(p.body))+'</p><div class="meta">'+fmt(p.date)+'</div></div></a>'}
+function card(p){return '<a class="card rv" href="?p='+p.id+'">'+pic(p)+'<div class="in"><span class="chip">'+esc(p.cat)+'</span><h3>'+esc(p.title)+'</h3><div class="meta">'+fmt(p.date)+'</div></div></a>'}
 function href(c){return c==="All"?location.pathname:location.pathname+"?c="+encodeURIComponent(c)}
 
 document.getElementById("date").textContent=new Date().toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"});
@@ -251,12 +247,10 @@ function startSlider(){
 function home(){
   document.title="Olivia Idea – Your Lifestyle Companion";
   var h=slider()+'<div class="strip rv">'+[["All","Home","Live Better","home"]].concat(CATS.map(function(c){return[c[0],c[0],c[1],c[2]]})).map(function(c){return '<a href="'+href(c[0])+'">'+ico(c[3])+'<b>'+c[1]+'</b><small>'+c[2]+'</small></a>'}).join("")+'</div>';
-  h+='<div class="adslot" data-ad="ad-mid"></div><div class="secs">';
-  CATS.forEach(function(c){
-    var p=P.filter(function(x){return x.cat===c[0]})[0];if(!p)return;
-    h+='<section><div class="sh"><h2>'+ico(c[2])+c[0]+'</h2><a href="'+href(c[0])+'">View All →</a></div>'+card(p)+'</section>';
-  });
-  app.innerHTML=h+'</div>';
+  h+='<div class="adslot" data-ad="ad-mid"></div><div class="ttl"><span></span><h2>LATEST IDEAS</h2><span></span></div>';
+  h+='<div class="grid">'+P.slice(0,shown).map(card).join("")+'</div>'+(P.length>shown?'<button class="more" id="more">Show more</button>':'');
+  app.innerHTML=h;
+  var m=document.getElementById("more");if(m)m.onclick=function(){shown+=STEP;render()};
 }
 function listing(title,list){
   document.title=title+" – Olivia Idea";
@@ -306,4 +300,4 @@ fetch("/api/ads").then(function(r){return r.json()}).then(function(a){ADS=a||{}}
 })();
 </script>
 </body>
-  </html>
+</html>
